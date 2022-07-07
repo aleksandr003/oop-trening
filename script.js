@@ -125,23 +125,230 @@
 
 // console.log(user.show());
 
+// class Employee {
+//   constructor(name, maney) {
+//     this.name = name;
+//     this.surn = maney;
+//   }
+//   showName() {
+//     return this.name;
+//   }
+//   showManey() {
+//     return this.surn;
+//   }
+//   showManeyBonus() {
+//     console.log(this.surn * 0.1 + this.surn);
+//     // return this.surn * 0.1 + this.surn;
+//   }
+// }
+// const employee = new Employee("Join", 2780);
+// employee.showManeyBonus();
+
+// ================================================
+
+// Приватные свойства в ООП в JavaScript
+
+// class User {
+//   #name;
+
+//   constructor(name) {
+//     this.#name = name;
+//   }
+
+//   show() {
+//     return this.#name;
+//   }
+// }
+
+// const user = new User("Sasha");
+
+// console.log(user.show());
+
+// class Employee {
+//   #name;
+//   #money;
+//   #age;
+//   constructor(name, money, age) {
+//     this.#name = name;
+//     this.#money = money;
+//     this.#age = age;
+//   }
+//   showInfoUser() {
+//     return this.#name + " " + this.#money + " " + this.#age;
+//   }
+// }
+
+// const employee = new Employee("Sasha", 5700, 30);
+
+// console.log(employee.showInfoUser());
+// ================================================
+
+// Приватные методы в ООП в JavaScript
+
+// class User {
+//   #name;
+
+//   constructor(name) {
+//     this.#name = name;
+//   }
+
+//   show() {
+//     return this.#cape(this.#name);
+//   }
+
+//   #cape(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+//   }
+// }
+
+// const user = new User("sasha");
+// console.log(user.show());
+
+//
+
+// В следующем коде сделайте вспомогательный метод приватным:
+// class Employee {
+//   constructor(name, salary) {
+//     this.name = name;
+//     this.salary = salary;
+//   }
+
+//   getSalary() {
+//     return this.#addSign(this.salary);
+//   }
+
+//   #addSign(num) {
+//     return num + "$";
+//   }
+// }
+
+// const employee = new Employee("Sasha", 5700);
+// console.log(employee.getSalary());
+
+// ================================================
+
+// Геттеры свойств в ООП в JavaScript
+
+// class User {
+//   #name;
+//   #surn;
+
+//   constructor(name, surn) {
+//     this.#name = name;
+//     this.#surn = surn;
+//   }
+
+//   getName() {
+//     return this.#name;
+//   }
+
+//   getSurn() {
+//     return this.#surn;
+//   }
+// }
+
+// const user = new User("Sasha", "Deswenimg");
+// console.log(user.getName());
+// console.log(user.getSurn());
+
+//
+
+// class Employee {
+//   #name;
+//   #maney;
+//   #age;
+//   constructor(name, maney, age) {
+//     this.#name = name;
+//     this.#maney = maney;
+//     this.#age = age;
+//   }
+
+//   getName() {
+//     return this.#name;
+//   }
+//   getManey() {
+//     return this.#maney;
+//   }
+//   getAge() {
+//     return this.#age;
+//   }
+// }
+
+// const employee = new Employee("Sasha", 5700, 30);
+// console.log(employee.name);
+
+// class User {
+//   #name;
+//   #surn;
+
+//   setName(name) {
+//     if (name.length > 0) {
+//       return (this.#name = name);
+//     } else {
+//       return "no";
+//     }
+//   }
+
+//   setSurn(surn) {
+//     if (surn.length > 0) {
+//       return (this.#surn = surn);
+//     } else {
+//       return "no";
+//     }
+//   }
+
+//   getName() {
+//     return this.#name;
+//   }
+
+//   getSurn() {
+//     return this.#surn;
+//   }
+// }
+// let user = new User();
+
+// console.log(user.setName("john"));
+// console.log(user.setSurn("vfsvfsb"));
+
 class Employee {
-  constructor(name, maney) {
-    this.name = name;
-    this.surn = maney;
+  #name;
+  #maney;
+  #age;
+
+  setAge(age) {
+    if (age > 0 && age <= 120) {
+      return (this.#age = age);
+    } else {
+      return "no";
+    }
   }
-  showName() {
-    return this.name;
+  setManey(num) {
+    this.#maney = num;
+    return this;
   }
-  showManey() {
-    return this.surn;
+
+  setName(name) {
+    this.#name = name;
+    return this;
   }
-  showManeyBonus() {
-    console.log(this.surn * 0.1 + this.surn);
-    // return this.surn * 0.1 + this.surn;
+
+  getName() {
+    return this.#name;
+  }
+  getManey() {
+    return this.#maney + "$";
+  }
+  getAge() {
+    return this.#age;
   }
 }
 
-const employee = new Employee("Join", 2780);
-
-employee.showManeyBonus();
+const employee = new Employee();
+employee.setName("Sasha").setManey(5700).setAge(30);
+// employee.setManey(5700);
+// employee.setName("Sasha");
+// console.log(employee.getAge());
+// console.log(employee.getManey());
+console.log(employee.getName());
+console.log(employee.getManey());
+console.log(employee.getAge());
