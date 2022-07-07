@@ -310,45 +310,48 @@
 // console.log(user.setName("john"));
 // console.log(user.setSurn("vfsvfsb"));
 
-class Employee {
-  #name;
-  #maney;
-  #age;
+// class Employee {
+//   #name;
+//   #maney;
+//   #age;
 
-  setAge(age) {
-    if (age > 0 && age <= 120) {
-      return (this.#age = age);
-    } else {
-      return "no";
-    }
-  }
-  setManey(num) {
-    this.#maney = num;
-    return this;
-  }
+//   setAge(age) {
+//     if (age > 0 && age <= 120) {
+//       return (this.#age = age);
+//     } else {
+//       return "no";
+//     }
+//   }
+//   setManey(num) {
+//     this.#maney = num;
+//     return this;
+//   }
 
-  setName(name) {
-    this.#name = name;
-    return this;
-  }
+//   setName(name) {
+//     this.#name = name;
+//     return this;
+//   }
 
-  getName() {
-    return this.#name;
-  }
-  getManey() {
-    return this.#maney + "$";
-  }
-  getAge() {
-    return this.#age;
-  }
-}
+//   getName() {
+//     return this.#name;
+//   }
+//   getManey() {
+//     return this.#maney + "$";
+//   }
+//   getAge() {
+//     return this.#age;
+//   }
+// }
 
-const employee = new Employee();
-employee.setName("Sasha").setManey(5700).setAge(30);
-// employee.setManey(5700);
-// employee.setName("Sasha");
-// console.log(employee.getAge());
+// const employee = new Employee();
+// employee.setName("Sasha").setManey(5700).setAge(30);
+// // employee.setManey(5700);
+// // employee.setName("Sasha");
+// // console.log(employee.getAge());
+// // console.log(employee.getManey());
+// console.log(employee.getName());
 // console.log(employee.getManey());
-console.log(employee.getName());
-console.log(employee.getManey());
-console.log(employee.getAge());
+// console.log(employee.getAge());
+
+const result = _.add(2, 3);
+console.log(result); // 5
