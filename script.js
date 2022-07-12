@@ -5,7 +5,7 @@
 // }
 // const user = new User();
 // console.log(user.show("juhn", "smit"));
-
+// https://github.com/bohdan-strilets?page=1&tab=repositories
 // ==================================
 // class Employee {
 //   show(name, money) {
@@ -353,5 +353,215 @@
 // console.log(employee.getManey());
 // console.log(employee.getAge());
 
-const result = _.add(2, 3);
-console.log(result); // 5
+// Переберите циклом массив объектов и выведите в консоль только имена работников.
+// class Student {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+// class Employee {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// let users = [
+//   new Student("user1"),
+//   new Employee("user2"),
+//   new Student("user3"),
+//   new Employee("user4"),
+//   new Student("user5"),
+//   new Employee("user6"),
+//   new Student("user7"),
+// ];
+
+// for (const elem of users) {
+//   if (elem instanceof Employee) {
+//     console.log(elem.name);
+//   }
+// }
+
+// class ArrHelper {
+//   getSum(arr) {
+//     let sum = 0;
+//     for (const elem of arr) {
+//       sum += elem;
+//     }
+//     return sum;
+//   }
+//   getAref(arr) {
+//     if (arr.length > 0) {
+//       const num = this.getSum(arr);
+//       return num / arr.length;
+//     }
+//     return 0;
+//   }
+// }
+
+// const arrHelper = new ArrHelper();
+
+// console.log(arrHelper.getSum([1, 2, 3, 4, 5, 8]));
+// console.log(arrHelper.getAref([1, 2, 3, 4, 5, 8]));
+
+// class City {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class User {
+//   constructor(name, surn, city) {
+//     this.name = name;
+//     this.surn = surn;
+//     this.city = city;
+//   }
+// }
+
+// let city = new City("luis");
+// let user = new User("john", "smit", city);
+
+// console.log(user.city.name);
+
+// класс создания работника
+// class Employee {
+//   constructor(name, position, department) {
+//     this.name = name;
+//     this.position = position;
+//     this.department = department;
+//   }
+// }
+
+// // класс создания пазиции работника
+// class Position {
+//   constructor(position) {
+//     this.position = position;
+//   }
+// }
+
+// // класс создания отдела работника
+// class Department {
+//   constructor(department) {
+//     this.department = department;
+//   }
+// }
+
+// // создания обьектов
+// const position = new Position("Middle");
+// const department = new Department("w3-431");
+// const employee = new Employee(
+//   "Sasha",
+//   position.position,
+//   department.department
+// );
+// console.log(employee);
+
+// class User {
+//   #name;
+
+//   constructor(name) {
+//     this.#name = name;
+//   }
+//   getName() {
+//     return this.#name;
+//   }
+// }
+
+// let users = [new User("john"), new User("eric"), new User("kyle")];
+
+// console.log(users);
+
+// for (const elem of users) {
+//   console.log(elem.getName());
+// }
+
+// class Employee {
+//   #salary;
+//   constructor(name, salary) {
+//     this.name = name;
+//     this.#salary = salary;
+//   }
+
+//   getSalary() {
+//     return this.#salary;
+//   }
+// }
+
+// const employee = [
+//   new Employee("Sasha", 5700),
+//   new Employee("Dadty", 4600),
+//   new Employee("Lansy", 6300),
+// ];
+
+// for (const elem of employee) {
+//   console.log(elem.name + " " + elem.getSalary());
+// }
+
+// class User {
+//   #name;
+//   #salary;
+
+//   constructor(name, salary) {
+//     this.#name = name;
+//     this.#salary = salary;
+//   }
+
+//   getName() {
+//     return this.#name;
+//   }
+
+//   getSalary() {
+//     return this.#salary;
+//   }
+// }
+
+// const user = [new User("Sasha", 5700), new User("Anna", 5400)];
+// for (const elem of user) {
+//   console.log(elem.getName() + " - " + elem.getSalary());
+// }
+
+// class User {
+//   #name;
+
+//   constructor(name) {
+//     this.#name = name;
+//   }
+//   getName() {
+//     return this.#name;
+//   }
+// }
+
+// class UsersCollection {
+//   #users;
+
+//   constructor() {
+//     this.#users = [];
+//   }
+//   add(user) {
+//     this.#users.push(user);
+//   }
+//   show() {
+//     for (let user of this.#users) {
+//       console.log(user.getName());
+//     }
+//   }
+// }
+
+// const uc = new UsersCollection();
+
+// uc.add(new User("joes"));
+// uc.add(new User("cda"));
+// uc.add(new User("vsfb"));
+
+// uc.show();
+
+// let obj = new Object();
+
+// console.log(obj);
+// console.dir(obj);
+
+// console.log(obj instanceof Object);
+
+let elem = document.querySelector("div");
+let elems = elem.children;
+
+console.dir(elems);
