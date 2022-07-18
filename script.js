@@ -561,7 +561,388 @@
 
 // console.log(obj instanceof Object);
 
-let elem = document.querySelector("div");
-let elems = elem.children;
+// let elem = document.querySelector("div");
+// let elems = elem.children;
 
-console.dir(elems);
+// console.dir(elems);
+
+// class User {
+//   setName(name) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+
+// class Student extends User {
+//   setYear(year) {
+//     this.year = year;
+//   }
+//   getYear() {
+//     return this.year;
+//   }
+// }
+
+// const student = new Student();
+// student.setName("Sasha");
+// console.log(student.getName());
+// student.setYear(1991);
+// console.log(student.getYear());
+// const name = student.getName();
+// const year = student.getYear();
+// console.log(`${name} ${year}`);
+
+// class User {
+//   setName(name) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+
+// class Student extends User {
+//   setName(name) {
+//     if (name.length > 0) {
+//       this.name = name;
+//     } else {
+//       throw new Error("student name error");
+//     }
+//   }
+// }
+// const student = new Student();
+// student.setName("vfs");
+// console.log(student.getName());
+
+// class User {
+//   setAge(age) {
+//     if (age >= 0) {
+//       this.age = age;
+//     } else {
+//       throw new Error("need age more 0");
+//     }
+//   }
+// }
+// class Employee {
+//   setAge(age) {
+//     if (age <= 120) {
+//       if (age >= 0) {
+//         super.setAge(age);
+//       } else {
+//         throw new Error("need age more 0");
+//       }
+//     } else {
+//       throw new Error("need age less 120");
+//     }
+//   }
+// }
+
+// const employee = new User();
+// employee.setAge(32);
+// employee.name = "Sasha";
+// console.log(employee.name);
+
+// class User {
+//   constructor(name, surn) {
+//     this.name = name;
+//     this.surn = surn;
+//   }
+
+//   getName() {
+//     return this.name;
+//   }
+//   getSurn() {
+//     return this.surn;
+//   }
+// }
+
+// class Student extends User {
+//   constructor(name, surn, age) {
+//     super(name, surn);
+//     this.age = age;
+//   }
+
+//   getAge() {
+//     return this.age;
+//   }
+// }
+
+// const student = new Student("Sasha", "Henres", 32);
+
+// console.log(student.getName());
+// console.log(student.getSurn());
+// console.log(student.getAge());
+
+// class User {
+//   setName(name) {
+//     this.name = name;
+//   }
+
+//   getName() {
+//     return this.#copeFirst(this.name);
+//   }
+
+//   #copeFirst(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+//   }
+// }
+
+// class Student extends User {
+//   setSurn(surn) {
+//     this.surn = surn;
+//   }
+//   getSurn() {
+//     return this.copeFirst(this.surn);
+//   }
+// }
+
+// const student = new Student();
+// student.setName("sasha");
+// console.log(student.getName());
+// student.setSurn("vfhfhf");
+// console.log(student.getSurn());
+
+// class User {
+//   #name;
+
+//   setName(name) {
+//     this.#name = name;
+//   }
+//   getName() {
+//     return this.#name;
+//   }
+// }
+
+// class Student extends User {}
+
+// const student = new Student();
+// student.setName("sasha");
+// console.log(student.getName());
+
+// class User {
+//   //   #name;
+//   //   #surn;
+
+//   setName(name) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+
+//   setSurn(surn) {
+//     this.surn = surn;
+//   }
+//   getSurn() {
+//     return this.surn;
+//   }
+// }
+
+// class Employee extends User {
+//   getFull() {
+//     return this.name + " " + this.surn;
+//   }
+// }
+
+// const employee = new Employee();
+// employee.setName("sasha");
+// employee.setSurn("cxvzv");
+// console.log(employee.getFull());
+// // console.log(employee.getSurn());
+
+// class User {
+//   #age;
+
+//   setAge(age) {
+//     this.#age = age;
+//   }
+//   getAge() {
+//     return this.#age;
+//   }
+// }
+
+// class Student extends User {
+//   incAge() {
+//     let age = this.getAge();
+//     age++;
+//     this.setAge(age);
+//   }
+// }
+// const student = new Student();
+// student.setAge(31);
+// console.log(student.getAge());
+// student.incAge();
+// console.log(student.getAge());
+
+// class User {
+//   #name;
+
+//   setName(name) {
+//     this.#name = name;
+//   }
+//   getName() {
+//     return this.#name;
+//   }
+// }
+
+// class Employee extends User {
+//   settName() {
+//     let uname = this.getName();
+//     if (uname.length > 0) {
+//       this.setName(name);
+//     }
+//   }
+// }
+
+// const employee = new Employee();
+// employee.setName("sasha");
+// employee.settName();
+// console.log(employee.getName());
+
+// let elem = document.querySelector("p");
+// console.dir(elem);
+
+// class User {
+//   constructor(name, cities) {
+//     this.name = name;
+//     this.cities = cities;
+//   }
+
+//   showCities() {
+//     this.cities.forEach((city) => {
+//       console.log(this.#cape(city)); // контекст потерялся
+//     });
+//   }
+
+//   #cape(str) {
+//     return str[0].toUpperCase() + str.slice(1);
+//   }
+// }
+
+// const arr = ["cadv", "vsfb", "bdgh", "bsfg", "etrwrgwwrb"];
+
+// const user = new User("Danrig", arr);
+
+// console.log(user.name);
+// user.showCities();
+
+// class Employee {
+//   constructor(name, salary, coeffs) {
+//     this.name = name;
+//     this.salary = salary;
+//     this.coeffs = coeffs;
+//   }
+
+//   getTotal() {
+//     return this.coeffs.reduce((res, coeff) => {
+//       return res + this.salary * coeff;
+//     }, 0);
+//   }
+// }
+
+// let employee = new Employee("john", 1000, [1.1, 1.2, 1.3]);
+// let total = employee.getTotal();
+// console.log(total);
+
+// const arrDublNum = function (arr) {
+//   let sum = 0;
+//   for (const elem of arr) {
+//     sum += elem * 2;
+//   }
+//   return sum;
+// };
+
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = [5, 6, 7, 8];
+
+// console.log(arrDublNum(arr1));
+// console.log(arrDublNum(arr2));
+
+// const getDigitsSum = function (num) {
+//   let arr = String(num).split("");
+//   let sum = 0;
+//   for (const elem of arr) {
+//     sum += Number(elem);
+//   }
+//   return sum;
+// };
+// console.log(getDigitsSum(25));
+
+// const reverseStr = function (str) {
+//   return str.split("").reverse().join("");
+// };
+// console.log(reverseStr("wsx"));
+
+// const delElem = function (val, arr) {
+//   return arr.filter((elem) => val !== elem);
+// };
+// const arr1 = [1, 2, 3, 4, 5, 5, 6, 2, 7, 7];
+// console.log(delElem(7, arr1));
+
+// let result = [];
+// let arr = [1524, 1321, 4563, 7144, 2879];
+
+// // перебор массива функцией если true добавить в новый массив
+// for (let elem of arr) {
+//   if (checkDigitsPairsSum(elem)) {
+//     result.push(elem);
+//   }
+// }
+
+// console.log(result);
+
+// // функция проверяет на true первые две и посдедние две цифры равны друг другу
+// function checkDigitsPairsSum(num) {
+//   let str = String(num);
+//   let sum1 = Number(str[0]) + Number(str[1]);
+//   let sum2 = Number(str[2]) + Number(str[3]);
+
+//   return sum1 == sum2;
+// }
+
+// let arr = [];
+// for (let i = 1; i <= 100; i += 1) {
+//   if (isPrime(i)) {
+//     arr.push(i);
+//   }
+// }
+// console.log(arr);
+
+// function isPrime(num) {
+//   for (let i = 2; i < num; i++) {
+//     if (num % i == 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// let num1 = 234;
+// let num2 = 531;
+
+// if (
+//   getDigitsSum(num1) === getDigitsSum(num2)
+//     ? alert("суммы цифр совпадают")
+//     : alert("суммы цифр не совпадают")
+// );
+
+// function getDigitsSum(num) {
+//   let sum = 0;
+//   let digits = String(num).split("");
+
+//   for (let digit of digits) {
+//     sum += Number(digit);
+//   }
+
+//   return sum;
+// }
+
+function merge(...arrs) {
+  const arr = [];
+  return arr.concat(...arrs);
+}
+
+let result = merge([1, 2, 3], [4, 5, 6], [7, 8, 9]);
+console.log(result);
